@@ -16,9 +16,9 @@ import cloud from "./images/cloud.svg";
 import mountain from "./images/mountain.svg";
 import waveImage from "./images/wave.png";
 import roadmapImage from "./images/roadmap.svg";
-// import footprintImage from "./images/footstep.svg";
+import footprintImage from "./images/footprints.svg";
 import { IoAddOutline } from "react-icons/io5";
-import { HiOutlineMinus } from "react-icons/hi";
+  import { HiOutlineMinus } from "react-icons/hi";
 //
 import ccskLogo from "./images/ccsk-logo.png";
 import cdpseLogo from "./images/cdpse-logo.png";
@@ -327,9 +327,9 @@ function App() {
 
           <p class="heroSection-description">
             <span class="heroSection-description-bold">Empowering CXOs</span>{" "}
-            with Cybersecurity & Privacy Solutions Expert in{" "}
+            with Cybersecurity & Privacy Solutions , Expert in{" "}
             <span class="heroSection-description-bold">GRC Frameworks</span> &
-            Regulatory Requirements Trainer by Choice.
+            Regulatory Requirements , Trainer by Choice.
           </p>
 
           <div class="sign-board-container">
@@ -343,6 +343,7 @@ function App() {
           <img src={sun} alt="blob" class="sun-img" width={150} />
           <img src={cloud} alt="blob" class="cloud-img" width={150} />
           <img src={mountain} alt="blob" class="mountain-img" width={500} />
+          <img src={footprintImage} alt="blob" class="footprint-img" width={150} />
         </div>
       </section>
 
@@ -645,7 +646,7 @@ function App() {
                 </a>
               </h3>
               <p class="pub-meta">
-                Research paper published in ISSA Journal USA,
+                Research paper published in ISSA Journal USA
               </p>
               <p class="pub-year">2014</p>
             </div>
