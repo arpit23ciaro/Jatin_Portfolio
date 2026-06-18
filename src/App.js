@@ -18,7 +18,7 @@ import waveImage from "./images/wave.png";
 import roadmapImage from "./images/roadmap.svg";
 import footprintImage from "./images/footprints.svg";
 import { IoAddOutline } from "react-icons/io5";
-  import { HiOutlineMinus } from "react-icons/hi";
+import { HiOutlineMinus } from "react-icons/hi";
 //
 import ccskLogo from "./images/ccsk-logo.png";
 import cdpseLogo from "./images/cdpse-logo.png";
@@ -29,8 +29,11 @@ import oneTrustThirdPartyBadge from "./images/onetrust-certified-third-party-man
 import instructorEliteBadge from "./images/instructorBadge-Elite.png";
 import iso9001Logo from "./images/ISO_9001.png";
 import iso27001Logo from "./images/ISO_27001.png";
+import iso27701Logo from "./images/ISO_27701.png";
+import iso42001Logo from "./images/ISO_42001.png";
 import pluralsiteLogo from "./images/pluralsight-badge.png";
 import ccLogo from "./images/cc-logo.png";
+import cippLogo from "./images/cipp-logo.png";
 import boatImage from "./images/boat.svg";
 import instructorImage from "./images/instructor.svg";
 import foundationImage from "./images/Foundation.svg";
@@ -44,8 +47,10 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaCheckCircle, FaStar } from "react-icons/fa";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import FeedbackModal from "./components/FeedbackModal";
+import useReveal from "./hooks/useReveal";
 
 function App() {
+  useReveal();
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedAccordian, setSelectedAccordia] = useState(-1);
@@ -136,12 +141,12 @@ function App() {
   ];
   const experiencePerDomain = [
     { domain: "Cloud Security", experience: "03 years" },
-    { domain: "IT Risk Management", experience: "10 years" },
-    { domain: "Third-Party Risk Management", experience: "06 years" },
+    { domain: "IT Risk Management", experience: "11 years" },
+    { domain: "Third-Party Risk Management", experience: "07 years" },
     { domain: "Academia & Curriculum Design", experience: "05 years" },
-    { domain: "Audits & Technical Assessments", experience: "08 years" },
-    { domain: "Governance, Risk & Compliance (GRC)", experience: "11 years" },
-    { domain: "Data Privacy (GDPR, CCPA, ISO 27701)", experience: "06 years" },
+    { domain: "Audits & Technical Assessments", experience: "09 years" },
+    { domain: "Governance, Risk & Compliance (GRC)", experience: "12 years" },
+    { domain: "Data Privacy (GDPR, CCPA, ISO 27701)", experience: "07 years" },
     {
       domain: "Secure SDLC, OWASP, and Product Security",
       experience: "06 years",
@@ -152,9 +157,9 @@ function App() {
     },
     {
       domain: "ISO 27001, SOC 2, NIST CSF, NIST 800-53, NESA",
-      experience: "08 years",
+      experience: "09 years",
     },
-    { domain: "HITRUST, HIPAA, ISO 42001", experience: "02 years" },
+    { domain: "HITRUST, HIPAA, ISO 42001", experience: "03 years" },
   ];
   const clientPortfolio = [
     "Mastercard",
@@ -173,6 +178,7 @@ function App() {
     "Symbiosis (SIU) Nagpur",
     "ONGC Dehradun",
     "XLRI Jamshedpur (Mentorship)",
+    "Avantika University",
   ];
   const trainingExperience = {
     isc2Certifications: [
@@ -199,8 +205,9 @@ function App() {
       "GRC based on Industry Best Practices",
       "Secure Coding and Secure SDLC",
       "Pathway to Cyber Security: Domains, Roles & Opportunities",
+      "ISO 27701:2025 Implementation / Auditor or Combined Training",
+      "ISO 42001:2023 Implementation / Auditor or Combined Training",
       "ISO 27001:2022 Implementation / Auditor or Combined Training",
-      "ISO 27701:2019 Implementation / Auditor or Combined Training",
       "Data Privacy, GDPR Implementation",
       "Transition from ISO 27001:2013 to ISO 27001:2022",
       "NIST CSF Implementation",
@@ -343,7 +350,12 @@ function App() {
           <img src={sun} alt="blob" class="sun-img" width={150} />
           <img src={cloud} alt="blob" class="cloud-img" width={150} />
           <img src={mountain} alt="blob" class="mountain-img" width={500} />
-          <img src={footprintImage} alt="blob" class="footprint-img" width={150} />
+          <img
+            src={footprintImage}
+            alt="blob"
+            class="footprint-img"
+            width={150}
+          />
         </div>
       </section>
 
@@ -352,12 +364,12 @@ function App() {
           <p class="aboutSection-tagline">
             A progression grounded in{" "}
             <span class="highlight-script">learning deeply,</span> leading
-            thoughtfully, and growing continuously.
+            thoughtfully and growing continuously.
           </p>
         </div>
 
         <div class="about-container">
-          <div class="about-card-container">
+          <div class="about-card-container reveal reveal-delay-1">
             <img src={foundationImage} alt="domain" width={200} />
             <p class="about-card-heading">Foundation</p>
             <ul class="about-card-list">
@@ -374,7 +386,7 @@ function App() {
               </li>
             </ul>
           </div>
-          <div class="about-card-container">
+          <div class="about-card-container reveal reveal-delay-2">
             <img src={domainImage} alt="domain" width={200} />
 
             <p class="about-card-heading">Domain Focus</p>
@@ -390,17 +402,17 @@ function App() {
               <li>
                 ISO 27001 · ISO 27701 · SOC 2 · GDPR · NIST CSF · TPRM · HIPAA ·
                 HITRUST · UAE NESA · ISO 9001 · ISO 17100 · ISO 13485 · ISO
-                18587
+                18587 · ISO 42001
               </li>
             </ul>
           </div>
-          <div class="about-card-container">
+          <div class="about-card-container reveal reveal-delay-3">
             <img src={learningImage} alt="domain" width={200} />
 
             <p class="about-card-heading">Learning & Development</p>
             <ul class="about-card-list">
               <li>
-                Being patr of Academic/Training/Mentoring is the vital oxygen
+                Being part of Academic/Training/Mentoring is the vital oxygen
                 that sustains my professional journey.{" "}
               </li>
               <li>
@@ -418,7 +430,7 @@ function App() {
 
       <section id="experience" class="experienceSection">
         {/* heading */}
-        <p class="section-heading">The Strategic Architect</p>
+        <p class="section-heading reveal">The Strategic Architect</p>
 
         {/* Experience container */}
         <div class="experience-container">
@@ -435,11 +447,11 @@ function App() {
                 ))}
               </div>
             </div>
-            <table class="experience-table">
+            <table class="experience-table reveal">
               <thead>
                 <tr>
                   <th>Experience per Domain</th>
-                  <th>Total 11+ Experience</th>
+                  <th>Total 12+ Experience</th>
                 </tr>
               </thead>
               <tbody>
@@ -452,7 +464,7 @@ function App() {
             </table>
           </div>
 
-          <div class="experience-accordian-section">
+          <div class="experience-accordian-section reveal">
             <h2>
               <span class="highlight-script" style={{ marginBottom: "2rem" }}>
                 Key Projects & Strategic Initiative
@@ -506,7 +518,7 @@ function App() {
                 style={{ transform: "rotate(340deg)" }}
               />
               <div>
-                <div class="edu-item">
+                <div class="edu-item reveal reveal-delay-1">
                   <h3 class="degree">PhD in Data Security & Privacy</h3>
                   <p class="institute">
                     Indian Institute of Information Technology (IIIT) Allahabad
@@ -514,7 +526,7 @@ function App() {
                   <p class="duration">2024 – 2027 (Expected)</p>
                 </div>
 
-                <div class="edu-item">
+                <div class="edu-item reveal reveal-delay-2">
                   <h3 class="degree">
                     Master of Science (MS) in Cyber Law & Information Security
                   </h3>
@@ -524,7 +536,7 @@ function App() {
                   <p class="duration">2012 – 2014</p>
                 </div>
 
-                <div class="edu-item">
+                <div class="edu-item reveal reveal-delay-3">
                   <h3 class="degree">
                     Bachelor of Engineering (BE) in Computer Science &
                     Engineering
@@ -544,16 +556,19 @@ function App() {
               </span>
             </h1>
             <div className="cert-box">
+              <img src={cippLogo} alt="img" width={100} />
               <img src={ccskLogo} alt="img" width={100} />
-              <img src={cdpseLogo} alt="img" width={100} />
+              <img src={iso27001Logo} alt="img" width={100} />
+              <img src={iso42001Logo} alt="img" width={100} />
               <img src={ctpraLogo} alt="img" width={100} />
+              <img src={ccLogo} alt="img" width={100} />
+              <img src={iso27701Logo} alt="img" width={100} />
+              <img src={iso9001Logo} alt="img" width={100} />
+              <img src={cdpseLogo} alt="img" width={100} />
               <img src={oneTrustBadge} alt="img" width={100} />
               <img src={oneTrustThirdPartyBadge} alt="img" width={100} />
-              <img src={ccLogo} alt="img" width={100} />
-              <img src={iso27001Logo} alt="img" width={100} />
-              <img src={iso9001Logo} alt="img" width={100} />
-              <img src={instructorEliteBadge} alt="img" width={100} />
               <img src={pluralsiteLogo} alt="img" width={100} />
+              <img src={instructorEliteBadge} alt="img" width={100} />
             </div>
           </div>
         </div>
@@ -565,6 +580,21 @@ function App() {
           </h1>
 
           <section class="publications-section">
+            <div class="pub-item">
+              <h3 class="pub-title">
+                Book Chapter – Integrating Threat Modelling and Risk Management
+                into Cyber Resilience Strategies
+              </h3>
+              <p class="pub-meta">
+                Book: Cyber Resilience: Fundamentals, Frameworks, and Future
+                Directions
+              </p>
+              <p class="pub-meta">
+                Chapter 7, Scrivener Publication, Wiley, ISBN [Book Under
+                Publication]
+              </p>
+              <p class="pub-year">2026</p>
+            </div>
             <div class="pub-item">
               <h3 class="pub-title">
                 Book Chapter – Patient Data Privacy using Blockchain -{" "}
@@ -798,7 +828,7 @@ function App() {
         </div>
       </section>
 
-      <section className="success-section">
+      {/* <section className="success-section">
         <div className="success-content">
           <h4 className="success-label">Success Story</h4>
 
@@ -850,6 +880,68 @@ function App() {
                 </li>
               </ul>
             </div>
+            <div className="success-illustration">
+              <img src={boatImage} alt="Success Illustration" />
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="success-section">
+        <div className="success-content">
+          <h4 className="success-label">Success Story</h4>
+
+          <div className="success-body">
+            <div className="success-left">
+              <h2 className="success-title">
+                Proof of Trust & Professional Impact
+              </h2>
+
+              <div className="proof-cards">
+                {/* LinkedIn Card */}
+                <a
+                  href="https://www.linkedin.com/in/sethijatin/details/recommendations/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="proof-card proof-card--linkedin reveal reveal-delay-1"
+                >
+                  <div className="proof-card__top">
+                    <div className="proof-card__icon-wrap proof-card__icon-wrap--linkedin">
+                      <FaLinkedin size={20} />
+                    </div>
+                    <span className="proof-card__title">
+                      LinkedIn Recommendations
+                    </span>
+                  </div>
+                  <p className="proof-card__desc">
+                    Peer and client endorsements from professionals across
+                    industries — directly on LinkedIn.
+                  </p>
+                </a>
+
+                {/* Feedback Card */}
+                <div
+                  className="proof-card proof-card--feedback reveal reveal-delay-1"
+                  onClick={() => setOpen(true)}
+                >
+                  <div className="proof-card__top">
+                    <div className="proof-card__icon-wrap proof-card__icon-wrap--feedback">
+                      <FaStar size={20} />
+                    </div>
+                    <span className="proof-card__title">Training Feedback</span>
+                  </div>
+                  <p className="proof-card__desc">
+                    Real responses collected from participants after live
+                    training sessions and certification bootcamps.
+                  </p>
+                </div>
+              </div>
+
+              {open && (
+                <FeedbackModal open={open} onClose={() => setOpen(false)} />
+              )}
+            </div>
+
             <div className="success-illustration">
               <img src={boatImage} alt="Success Illustration" />
             </div>

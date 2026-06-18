@@ -402,7 +402,7 @@ nav ul li a:hover {
   flex-direction: column;
   gap: 1rem;
   text-align: left;
-  list-style-position: inside;
+  list-style-position: outside;
   padding-left: 0;
 }
 
@@ -598,7 +598,7 @@ nav ul li a:hover {
 }
 
 .accordian-list {
-  list-style-position: inside;
+  list-style-position: outside;
   font-size: 1.2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1031,7 +1031,7 @@ nav ul li a:hover {
 }
 
 .training-list {
-  list-style-position: inside;
+  list-style-position: outside;
   font-size: 1.2rem;
   padding-top: 0.7rem;
   padding-bottom: 1rem;
@@ -1220,6 +1220,7 @@ nav ul li a:hover {
 }
 
 /* success section */
+/* success section */
 .success-section {
   padding: 4rem 6vw;
   background: #e8f6fb;
@@ -1243,50 +1244,170 @@ nav ul li a:hover {
 .success-content {
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 1.5rem;
 }
 
-.success-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.success-list li {
+.success-body {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.check-icon {
-  color: #1e88e5;
-  font-size: 1.2rem;
-  margin-top: 4px;
-}
-
-.success-list span {
-  font-weight: 600;
-  display: block;
-}
-
-.success-list a {
-  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.3rem;
-  color: #1e88e5;
-  text-decoration: none;
-  font-size: 0.9rem;
+  gap: 3rem;
 }
 
-.success-list a:hover {
-  text-decoration: underline;
+.success-left {
+  flex: 1;
 }
 
 .success-illustration img {
   width: 100%;
   max-width: 600px;
+}
+
+/* Proof cards grid */
+.proof-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.proof-card {
+  background: #ffffff;
+  border: 1px solid #d0e8f2;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.15s ease;
+  position: relative;
+}
+
+.proof-card:hover {
+  border-color: #90cde8;
+  background: #f4fbff;
+  transform: translateY(-2px);
+}
+
+.proof-card__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proof-card__icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.proof-card__icon-wrap--linkedin {
+  background: #e8f1fb;
+  color: #0a66c2;
+}
+
+.proof-card__icon-wrap--feedback {
+  background: #fff4e0;
+  color: #c97b10;
+}
+
+.proof-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.proof-card__desc {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.proof-card__pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.proof-card__pill--linkedin {
+  background: #e8f1fb;
+  color: #0a66c2;
+}
+
+.proof-card__pill--feedback {
+  background: #fff4e0;
+  color: #c97b10;
+}
+
+.proof-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #888;
+  margin-top: 2px;
+}
+
+.proof-card:hover .proof-card__cta {
+  color: #111;
+}
+
+.proof-card__arrow {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.proof-card:hover .proof-card__arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .success-body {
+    align-items: flex-start;
+  }
+
+  .success-illustration img {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .success-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .success-title {
+    font-size: 1.6rem;
+  }
+
+  .proof-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .success-illustration {
+    margin-top: 2rem;
+  }
+
+  .success-illustration img {
+    max-width: 100%;
+  }
 }
 
 /* Responsive */
@@ -1456,5 +1577,36 @@ nav ul li a:hover {
 
   .modal-content {
     padding: 1rem;
+  }
+}
+
+
+
+/* Base hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state — added by JS when element enters viewport */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay for child cards/items */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

@@ -41,6 +41,12 @@ export default function FeedbackModal({ open, onClose }) {
     "It was a well-planned session and helped me explore cybersecurity in depth.",
     "An insightful cybersecurity workshop with hands-on activities, including virtual machines and Kali Linux.",
     "The workshop was highly informative with expert instructors and practical activities. Overall, a valuable learning experience.",
+    "The instructor kept engagement high, was very knowledgeable, and pacing was great.",
+    "He was engaged and animated, you could tell he knew the material and was excited to share his knowledge.",
+    "Jatin is super clear, and I like the way he organized and the flow of his content.",
+    "The instructor was enthusiastic, well prepared, had interactive exercises, and engagedparticipants :) I learnt a lot!",
+    "He explains the concept with enthusiasm and makes the session comfortable and easy tofollow for everyone.",
+    "Jatin delivered an outstanding session on Threat Modeling that was both insightful and highlyengaging. His ability to break down complex security concepts into clear, actionable stepsmade the topic very approachable for everyone in the room.The real-world examples and practical demonstrations he used brought the subject to life, making it easy to understand howthreat modeling applies to our day-to-day work. His depth of knowledge, combined with hisenthusiasm for the subject, kept the audience engaged throughout.",
   ];
 
   return (
