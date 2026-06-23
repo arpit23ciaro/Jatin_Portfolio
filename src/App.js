@@ -34,6 +34,7 @@ import iso42001Logo from "./images/ISO_42001.png";
 import pluralsiteLogo from "./images/pluralsight-badge.png";
 import ccLogo from "./images/cc-logo.png";
 import cippLogo from "./images/cipp-logo.png";
+import googleCloudLogo from "./images/google-cloud-logo.png";
 import boatImage from "./images/boat.svg";
 import instructorImage from "./images/instructor.svg";
 import foundationImage from "./images/Foundation.svg";
@@ -140,13 +141,17 @@ function App() {
     "Banking & Financial Services (BFSI)",
   ];
   const experiencePerDomain = [
-    { domain: "Cloud Security", experience: "03 years" },
+    { domain: "Governance, Risk & Compliance (GRC)", experience: "12 years" },
+    { domain: "Audits & Technical Assessments", experience: "09 years" },
+    {
+      domain: "ISO 27001, SOC 2, NIST CSF, NIST 800-53, NESA",
+      experience: "09 years",
+    },
+    { domain: "Data Privacy (GDPR, CCPA, ISO 27701)", experience: "07 years" },
+    { domain: "HITRUST, HIPAA, ISO 42001", experience: "03 years" },
     { domain: "IT Risk Management", experience: "11 years" },
     { domain: "Third-Party Risk Management", experience: "07 years" },
-    { domain: "Academia & Curriculum Design", experience: "05 years" },
-    { domain: "Audits & Technical Assessments", experience: "09 years" },
-    { domain: "Governance, Risk & Compliance (GRC)", experience: "12 years" },
-    { domain: "Data Privacy (GDPR, CCPA, ISO 27701)", experience: "07 years" },
+    { domain: "Cloud Security", experience: "03 years" },
     {
       domain: "Secure SDLC, OWASP, and Product Security",
       experience: "06 years",
@@ -155,11 +160,7 @@ function App() {
       domain: "Merger & Acquisition Information Security Activities",
       experience: "02 years",
     },
-    {
-      domain: "ISO 27001, SOC 2, NIST CSF, NIST 800-53, NESA",
-      experience: "09 years",
-    },
-    { domain: "HITRUST, HIPAA, ISO 42001", experience: "03 years" },
+    { domain: "Academia & Curriculum Design", experience: "05 years" },
   ];
   const clientPortfolio = [
     "Mastercard",
@@ -523,7 +524,7 @@ function App() {
                   <p class="institute">
                     Indian Institute of Information Technology (IIIT) Allahabad
                   </p>
-                  <p class="duration">2024 – 2027 (Expected)</p>
+                  <p class="duration">2024 – 2028 (Expected)</p>
                 </div>
 
                 <div class="edu-item reveal reveal-delay-2">
@@ -552,7 +553,7 @@ function App() {
           <div class="certificate-container" style={{ marginTop: "3rem" }}>
             <h1>
               <span class="highlight-script" style={{ marginBottom: "2rem" }}>
-                Certificate
+                Certificates
               </span>
             </h1>
             <div className="cert-box">
@@ -564,6 +565,7 @@ function App() {
               <img src={ccLogo} alt="img" width={100} />
               <img src={iso27701Logo} alt="img" width={100} />
               <img src={iso9001Logo} alt="img" width={100} />
+              <img src={googleCloudLogo} alt="img" width={100} />
               <img src={cdpseLogo} alt="img" width={100} />
               <img src={oneTrustBadge} alt="img" width={100} />
               <img src={oneTrustThirdPartyBadge} alt="img" width={100} />
